@@ -1,5 +1,3 @@
-[![hacs_badge](https://img.shields.io/badge/HACS-Default-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/integration)
-
 # Victron Instant Readout Integration
 
 This integration allows exposing data from Victron devices with Instant Readout enabled in Home Assistant.
@@ -17,15 +15,6 @@ Supported Devices & Entities:
 - Smart Battery Sense
   - Voltage
   - Temperature (°C)
-- Smart Battery Protect
-  - Input Voltage
-  - Output Voltage
-  - Output State
-  - Device State
-  - Charger Error
-  - Alarm Reason
-  - Warning Reason
-  - Off Reason
 - MPPT/Solar Charger
   - Charger State (Off, Bulk, Absorption, Float)
   - Battery Voltage (V)
@@ -33,18 +22,35 @@ Supported Devices & Entities:
   - Solar Power (W)
   - Yield Today (Wh)
   - External Device Load (A)
-- DC/DC Charger
-  - Input Voltage
-  - Output Voltage
+- Inverter
+  - Device State (Off, Inverting)
+  - Battery Voltage (V)
+  - AC Voltage (V)
+  - AC Current (A)
+  - AC Apparent Power (VA)
+- VE.Bus Adapter (works with Multiplus Inverters)
+  - Device State (Off, Inverting)
+  - Battery Voltage (V)
+  - Battery Current (A)
+  - Battery Temperature (°C)
+  - Battery State of Charge (%)
+  - AC Input State (AC_IN_1, AC_IN_2, NOT_CONNECTED)
+  - AC Input Power (W)
+  - AC Output Power (W)
+- Orion Tr DC/DC Converter
   - Operation Mode
-  - Charger Error
+  - Input Voltage (V)
+  - Output Voltage (V)
   - Off Reason
-- AC Charger
-  - Output Voltage 1|2|3
-  - Output Current 1|2|3
+  - Charger Error
+- Orion XS DC/DC Converter
   - Operation Mode
-  - Temperature (°C)
-  - AC Current
+  - Input Voltage (V)
+  - Input Current (A)
+  - Output Voltage (V)
+  - Output Current (A)
+  - Off Reason
+  - Charger Error
 
 # Installation
 
@@ -57,6 +63,7 @@ Supported Devices & Entities:
 ## HACS
 
 1. Add the integration through this link:
-   [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=keshavdv&repository=victron-hacs&category=integration)
+   [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=j9brownsooty66&repository=victron-hacs&category=integration)
 2. Restart Home Assistant
 3. Setup integration via the integration page.
+
